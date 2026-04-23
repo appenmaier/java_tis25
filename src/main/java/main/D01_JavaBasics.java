@@ -2,8 +2,20 @@ package main;
 
 import java.util.Scanner;
 
+/**
+ * Java Basics
+ *
+ * @author Daniel Appenmaier
+ * @version 1.0
+ *
+ */
 public class D01_JavaBasics {
 
+   /**
+    * Main Method
+    * 
+    * @param args program arguments
+    */
    public static void main(String[] args) {
       /* Datentypen und Datenobjekte */
       String firstName;
@@ -109,6 +121,38 @@ public class D01_JavaBasics {
             break;
          }
       }
+
+      /* Vergleich von Zeichenketten */
+      String text = "Hello";
+      System.out.print("Bitte gib die Zeichenkette \"Hello\" ein: ");
+      String input = scanner.next();
+      if (text.equals(input)) {
+         System.out.println("Gut gemacht");
+      } else {
+         System.out.println("Nö, das war leider falsch");
+         System.out.println(text);
+         System.out.println(input);
+      }
+
+      /* Arrays */
+      String[] names = new String[3];
+      names[0] = "Hans";
+      names[1] = "Peter";
+      names[2] = "Lisa";
+      System.out.println(names[1]);
+      names[1] = "Petra";
+
+      int[] numbers = {5, -2, 77, 1, 9, 0, -3};
+      numbers[2] = 7;
+      System.out.println(numbers[0]);
+      System.out.println(numbers[numbers.length - 1]);
+
+      int total = 0;
+      for (int i = 0; i < numbers.length; i++) {
+         int number = numbers[i];
+         total += number;
+      }
+      System.out.println(total);
    }
 
 }
