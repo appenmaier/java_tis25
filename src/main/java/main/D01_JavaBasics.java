@@ -153,6 +153,12 @@ public class D01_JavaBasics {
          total += number;
       }
       System.out.println(total);
+
+      total = 0;
+      for (int number : numbers) {
+         total += number;
+      }
+      System.out.println(total);
    }
 
 }
