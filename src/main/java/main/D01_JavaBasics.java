@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class D01_JavaBasics {
 
    public static void main(String[] args) {
+      /* Datentypen und Datenobjekte */
       String firstName;
       String familyName;
       String firstNameAndLastName;
@@ -48,6 +49,66 @@ public class D01_JavaBasics {
       System.out.println(sizeInM);
       System.out.println(isHappy);
       System.out.println(gender);
+
+      /* Verzweigungen */
+      // Vergleichsoperatoren: >, >=, <, <=, ==, !=
+      // Logischer Operatoren: && (Und), || (Oder), ! (Verneinung)
+      if ((gender == 'm' || gender == 'M') && age >= 18) {
+         System.out.println("Hallo Herr " + familyName);
+      } else if ((gender == 'w' || gender == 'W') && age >= 18) {
+         System.out.println("Hallo Frau " + familyName);
+      } else {
+         System.out.println("Hallo " + firstName);
+      }
+
+      String genderText;
+      if (gender == 'm' || gender == 'M') {
+         genderText = "männlich";
+      } else if (gender == 'w' || gender == 'W') {
+         genderText = "weiblich";
+      } else {
+         genderText = "divers";
+      }
+      System.out.println(genderText);
+
+      genderText = (gender == 'm' || gender == 'M') ? "männlich"
+            : (gender == 'w' || gender == 'W') ? "weiblich" : "divers";
+      System.out.println(genderText);
+
+      System.out.println((gender == 'm' || gender == 'M') ? "männlich"
+            : (gender == 'w' || gender == 'W') ? "weiblich" : "divers");
+
+      /* Fallunterscheidungen */
+      genderText = switch (gender) {
+         case 'm', 'M' -> "männlich";
+         case 'w', 'W' -> "weiblich";
+         default       -> "divers";
+      };
+      System.out.println(genderText);
+
+      /* Schleifen */
+      int x = 1;
+      while (x <= 10) {
+         System.out.println(x);
+         x++;
+      }
+
+      int z = 1;
+      do {
+         System.out.println(z);
+         z++;
+      } while (z <= 10);
+
+      for (int i = 1; i <= 10; i++) {
+         System.out.println(i);
+      }
+
+      while (true) {
+         System.out.print("Schleifen Beenden? (true, false) ");
+         if (scanner.nextBoolean()) {
+            break;
+         }
+      }
    }
 
 }
