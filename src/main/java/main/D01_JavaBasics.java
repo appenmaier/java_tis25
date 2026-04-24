@@ -20,6 +20,7 @@ public class D01_JavaBasics {
       /* Datentypen und Datenobjekte */
       String firstName;
       String familyName;
+      @SuppressWarnings("unused")
       String firstNameAndLastName;
 
       int age;
@@ -33,6 +34,7 @@ public class D01_JavaBasics {
       System.out.println(length);
       System.out.println(charAt7);
 
+      @SuppressWarnings("resource")
       Scanner scanner = new Scanner(System.in);
 
       System.out.print("Gib bitte Deinen Vornamen ein: ");
