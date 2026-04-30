@@ -3,18 +3,19 @@ package main;
 import java.util.Scanner;
 
 /**
- * Java Basics
+ * Demonstrates fundamental Java language elements including primitive data types,
+ * user input, conditional statements, loops, string comparison, and arrays.
  *
  * @author Daniel Appenmaier
  * @version 1.0
- *
  */
 public class D01_JavaBasics {
 
    /**
-    * Main Method
-    * 
-    * @param args program arguments
+    * Entry point of the demonstration.
+    * Reads user input from the console and illustrates branching, loops, and array operations.
+    *
+    * @param args program arguments (not used)
     */
    public static void main(String[] args) {
       /* Datentypen und Datenobjekte */

@@ -24,10 +24,18 @@ public class TableLight {
    /** The light bulb currently installed in this lamp, or {@code null} if none. */
    private LightBulb lightBulb;
 
+   /**
+    * Creates a table light with the given light bulb pre-installed.
+    *
+    * @param lightBulb the light bulb to install initially
+    */
    public TableLight(LightBulb lightBulb) {
       this.lightBulb = lightBulb;
    }
 
+   /**
+    * Creates a table light with no light bulb installed.
+    */
    public TableLight() {}
 
    /**
@@ -85,14 +93,29 @@ public class TableLight {
       return isConnected && isOn && lightBulb != null;
    }
 
+   /**
+    * Returns the light bulb currently installed in this lamp.
+    *
+    * @return the installed {@link LightBulb}, or {@code null} if none is installed
+    */
    public LightBulb getLightBulb() {
       return lightBulb;
    }
 
+   /**
+    * Returns whether the lamp is plugged into a power outlet.
+    *
+    * @return {@code true} if connected; {@code false} otherwise
+    */
    public boolean isConnected() {
       return isConnected;
    }
 
+   /**
+    * Returns whether the lamp's switch is in the on position.
+    *
+    * @return {@code true} if switched on; {@code false} otherwise
+    */
    public boolean isOn() {
       return isOn;
    }
