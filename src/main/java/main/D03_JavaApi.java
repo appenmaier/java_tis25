@@ -28,7 +28,7 @@ import model.TableLight;
  * @version 1.0
  *
  */
-public class D03_JavApi {
+public class D03_JavaApi {
 
    @SuppressWarnings("unused")
    public static void main(String[] args) throws FileNotFoundException {
