@@ -1,6 +1,7 @@
 package model;
 
-import java.util.Objects;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Represents a table lamp that requires a power connection, a switch, and a {@link LightBulb} to
@@ -13,6 +14,8 @@ import java.util.Objects;
  * @author Daniel Appenmaier
  * @version 1.0
  */
+@ToString
+@EqualsAndHashCode
 public class TableLight {
 
    /** Indicates whether the lamp is plugged into a power outlet. */
@@ -24,6 +27,8 @@ public class TableLight {
    /** The light bulb currently installed in this lamp, or {@code null} if none. */
    private LightBulb lightBulb;
 
+   private final PlugType plugType;
+
    /**
     * Creates a table light with the given light bulb pre-installed.
     *
@@ -31,12 +36,15 @@ public class TableLight {
     */
    public TableLight(LightBulb lightBulb) {
       this.lightBulb = lightBulb;
+      plugType = PlugType.TYPE_F;
    }
 
    /**
     * Creates a table light with no light bulb installed.
     */
-   public TableLight() {}
+   public TableLight() {
+      plugType = PlugType.TYPE_F;
+   }
 
    /**
     * Plugs the lamp into a power outlet.
@@ -120,31 +128,13 @@ public class TableLight {
       return isOn;
    }
 
-   @Override
-   public String toString() {
-      return "TableLight [isConnected=" + isConnected + ", isOn=" + isOn + ", lightBulb="
-            + lightBulb + "]";
-   }
-
-   @Override
-   public int hashCode() {
-      return Objects.hash(isConnected, isOn, lightBulb);
-   }
-
-   @Override
-   public boolean equals(Object obj) {
-      if (this == obj) {
-         return true;
-      }
-      if (obj == null) {
-         return false;
-      }
-      if (getClass() != obj.getClass()) {
-         return false;
-      }
-      TableLight other = (TableLight) obj;
-      return isConnected == other.isConnected && isOn == other.isOn
-            && Objects.equals(lightBulb, other.lightBulb);
+   /**
+    * Returns the plug type of this table light.
+    *
+    * @return the {@link PlugType} of this light
+    */
+   public PlugType getPlugType() {
+      return plugType;
    }
 
 }

@@ -1,0 +1,3 @@
+Hans;m;42;true
+Lisa;w;50;false
+Peter;m;14;true
