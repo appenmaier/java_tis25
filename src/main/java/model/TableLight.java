@@ -27,6 +27,7 @@ public class TableLight {
    /** The light bulb currently installed in this lamp, or {@code null} if none. */
    private LightBulb lightBulb;
 
+   /** The plug type used by this lamp to connect to a power outlet. */
    private final PlugType plugType;
 
    /**

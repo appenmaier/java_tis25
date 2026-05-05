@@ -30,6 +30,12 @@ import model.TableLight;
  */
 public class D03_JavaApi {
 
+   /**
+    * Entry point of the demonstration.
+    *
+    * @param args program arguments (not used)
+    * @throws FileNotFoundException if the persons data file cannot be found
+    */
    @SuppressWarnings("unused")
    public static void main(String[] args) throws FileNotFoundException {
       /* Mathematische Berechnungen */

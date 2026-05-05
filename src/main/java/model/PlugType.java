@@ -29,6 +29,13 @@ public enum PlugType {
    /** Geographic region where this plug type is predominantly used. */
    private final String region;
 
+   /**
+    * Creates a plug type constant with the given description, standard, and region.
+    *
+    * @param description human-readable name of the plug type
+    * @param norm        technical standard that specifies this plug type
+    * @param region      geographic region where this plug type is predominantly used
+    */
    PlugType(String description, String norm, String region) {
       this.description = description;
       this.norm = norm;
