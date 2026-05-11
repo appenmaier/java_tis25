@@ -14,15 +14,15 @@ import lombok.ToString;
  * @author Daniel Appenmaier
  * @version 1.0
  */
-@ToString
-@EqualsAndHashCode
-public class TableLight {
+@ToString(callSuper = true)
+@EqualsAndHashCode(callSuper = true)
+public class TableLight extends Light implements WiredDevice {
 
    /** Indicates whether the lamp is plugged into a power outlet. */
    private boolean isConnected;
 
-   /** Indicates whether the lamp's switch is in the on position. */
-   private boolean isOn;
+   // /** Indicates whether the lamp's switch is in the on position. */
+   // private boolean isOn;
 
    /** The light bulb currently installed in this lamp, or {@code null} if none. */
    private LightBulb lightBulb;
@@ -50,6 +50,7 @@ public class TableLight {
    /**
     * Plugs the lamp into a power outlet.
     */
+   @Override
    public void plugIn() {
       isConnected = true;
    }
@@ -57,23 +58,26 @@ public class TableLight {
    /**
     * Unplugs the lamp from the power outlet.
     */
+   @Override
    public void pullThePlug() {
       isConnected = false;
    }
 
-   /**
-    * Turns the lamp's switch to the on position.
-    */
-   public void switchOn() {
-      isOn = true;
-   }
+   // /**
+   // * Turns the lamp's switch to the on position.
+   // */
+   // @Override
+   // public void switchOn() {
+   // isOn = true;
+   // }
 
-   /**
-    * Turns the lamp's switch to the off position.
-    */
-   public void switchOff() {
-      isOn = false;
-   }
+   // /**
+   // * Turns the lamp's switch to the off position.
+   // */
+   // @Override
+   // public void switchOff() {
+   // isOn = false;
+   // }
 
    /**
     * Replaces the currently installed light bulb with a new one.
@@ -98,8 +102,9 @@ public class TableLight {
     *
     * @return {@code true} if the lamp is shining; {@code false} otherwise
     */
+   @Override
    public boolean isShining() {
-      return isConnected && isOn && lightBulb != null;
+      return isConnected && isOn() && lightBulb != null;
    }
 
    /**
@@ -120,14 +125,15 @@ public class TableLight {
       return isConnected;
    }
 
-   /**
-    * Returns whether the lamp's switch is in the on position.
-    *
-    * @return {@code true} if switched on; {@code false} otherwise
-    */
-   public boolean isOn() {
-      return isOn;
-   }
+   // /**
+   // * Returns whether the lamp's switch is in the on position.
+   // *
+   // * @return {@code true} if switched on; {@code false} otherwise
+   // */
+   // @Override
+   // public boolean isOn() {
+   // return isOn;
+   // }
 
    /**
     * Returns the plug type of this table light.
