@@ -25,7 +25,7 @@ public class D04_Inheritance {
     * @param args command-line arguments (not used)
     */
    public static void main(String[] args) {
-      /* Ansatz ohne Verberung */
+      /* Approach without inheritance */
       ArrayList<TableLight> tableLights = new ArrayList<>();
       tableLights.add(new TableLight());
       tableLights.add(new TableLight());
@@ -50,7 +50,7 @@ public class D04_Inheritance {
 
       System.out.println();
 
-      /* Ansatz mit Vererbung */
+      /* Approach with inheritance */
       ArrayList<Light> lights = new ArrayList<>();
       lights.add(new TableLight()); // Upcast
       lights.add(new TableLight()); // Upcast
@@ -59,7 +59,7 @@ public class D04_Inheritance {
       lights.add(new FlashLight()); // Upcast
 
       for (Light l : lights) {
-         l.switchOn(); // Dynamische Polymorphie
+         l.switchOn(); // Dynamic polymorphism
 
          if (l instanceof TableLight) {
             TableLight t = (TableLight) l; // Downcast
@@ -71,19 +71,19 @@ public class D04_Inheritance {
             f.recharge();
          }
 
-         System.out.println(l); // Statische und Dynamische Polymorphie
-         System.out.println(l.isShining()); // Statische und Dynamische Polymorphie
+         System.out.println(l); // Static and dynamic polymorphism
+         System.out.println(l.isShining()); // Static and dynamic polymorphism
       }
 
       System.out.println();
 
-      /* Schnittstellen (Interfaces) */
+      /* Interfaces */
       ArrayList<WiredDevice> devices = new ArrayList<>();
       devices.add(new TableLight()); // Upcast
       devices.add(new Toaster()); // Upcast
 
       for (WiredDevice w : devices) {
-         w.plugIn(); // Polymorphie
+         w.plugIn(); // Polymorphism
 
          if (w instanceof TableLight) {
             TableLight t = (TableLight) w; // Downcast

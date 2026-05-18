@@ -18,7 +18,7 @@ public class Toaster implements WiredDevice {
     */
    @Override
    public void plugIn() {
-      System.out.println("eingesteckt");
+      System.out.println("plugged in");
    }
 
    /**
@@ -26,7 +26,7 @@ public class Toaster implements WiredDevice {
     */
    @Override
    public void pullThePlug() {
-      System.out.println("ausgesteckt");
+      System.out.println("unplugged");
    }
 
 }

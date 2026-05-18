@@ -18,7 +18,7 @@ public class D01_JavaBasics {
     * @param args program arguments (not used)
     */
    public static void main(String[] args) {
-      /* Datentypen und Datenobjekte */
+      /* Data types and data objects */
       String firstName;
       String familyName;
       @SuppressWarnings("unused")
@@ -38,22 +38,22 @@ public class D01_JavaBasics {
       @SuppressWarnings("resource")
       Scanner scanner = new Scanner(System.in);
 
-      System.out.print("Gib bitte Deinen Vornamen ein: ");
+      System.out.print("Please enter your first name: ");
       firstName = scanner.next();
 
-      System.out.print("Gib bitte Deinen Nachnamen ein: ");
+      System.out.print("Please enter your last name: ");
       familyName = scanner.next();
 
-      System.out.print("Gib bitte Dein Alter ein: ");
+      System.out.print("Please enter your age: ");
       age = scanner.nextInt();
 
-      System.out.print("Gib bitte Deine Größe in Meter ein: ");
+      System.out.print("Please enter your height in metres: ");
       sizeInM = scanner.nextDouble();
 
-      System.out.print("Gib bitte ein, ob Du glücklich bist (true, false): ");
+      System.out.print("Please enter whether you are happy (true, false): ");
       isHappy = scanner.nextBoolean();
 
-      System.out.print("Gib bitte Dein Geschlecht ein (m, w, d): ");
+      System.out.print("Please enter your gender (m, f, d): ");
       gender = scanner.next().charAt(0);
 
       System.out.println(firstName);
@@ -65,43 +65,43 @@ public class D01_JavaBasics {
       System.out.println(isHappy);
       System.out.println(gender);
 
-      /* Verzweigungen */
-      // Vergleichsoperatoren: >, >=, <, <=, ==, !=
-      // Logischer Operatoren: && (Und), || (Oder), ! (Verneinung)
+      /* Conditional statements */
+      // Comparison operators: >, >=, <, <=, ==, !=
+      // Logical operators: && (and), || (or), ! (not)
       if ((gender == 'm' || gender == 'M') && age >= 18) {
-         System.out.println("Hallo Herr " + familyName);
-      } else if ((gender == 'w' || gender == 'W') && age >= 18) {
-         System.out.println("Hallo Frau " + familyName);
+         System.out.println("Hello Mr " + familyName);
+      } else if ((gender == 'f' || gender == 'F') && age >= 18) {
+         System.out.println("Hello Ms " + familyName);
       } else {
-         System.out.println("Hallo " + firstName);
+         System.out.println("Hello " + firstName);
       }
 
       String genderText;
       if (gender == 'm' || gender == 'M') {
-         genderText = "männlich";
-      } else if (gender == 'w' || gender == 'W') {
-         genderText = "weiblich";
+         genderText = "male";
+      } else if (gender == 'f' || gender == 'F') {
+         genderText = "female";
       } else {
-         genderText = "divers";
+         genderText = "diverse";
       }
       System.out.println(genderText);
 
-      genderText = (gender == 'm' || gender == 'M') ? "männlich"
-            : (gender == 'w' || gender == 'W') ? "weiblich" : "divers";
+      genderText = (gender == 'm' || gender == 'M') ? "male"
+            : (gender == 'f' || gender == 'F') ? "female" : "diverse";
       System.out.println(genderText);
 
-      System.out.println((gender == 'm' || gender == 'M') ? "männlich"
-            : (gender == 'w' || gender == 'W') ? "weiblich" : "divers");
+      System.out.println((gender == 'm' || gender == 'M') ? "male"
+            : (gender == 'f' || gender == 'F') ? "female" : "diverse");
 
-      /* Fallunterscheidungen */
+      /* Switch expressions */
       genderText = switch (gender) {
-         case 'm', 'M' -> "männlich";
-         case 'w', 'W' -> "weiblich";
-         default       -> "divers";
+         case 'm', 'M' -> "male";
+         case 'f', 'F' -> "female";
+         default       -> "diverse";
       };
       System.out.println(genderText);
 
-      /* Schleifen */
+      /* Loops */
       int x = 1;
       while (x <= 10) {
          System.out.println(x);
@@ -119,20 +119,20 @@ public class D01_JavaBasics {
       }
 
       while (true) {
-         System.out.print("Schleifen Beenden? (true, false) ");
+         System.out.print("Exit loop? (true, false) ");
          if (scanner.nextBoolean()) {
             break;
          }
       }
 
-      /* Vergleich von Zeichenketten */
+      /* String comparison */
       String text = "Hello";
-      System.out.print("Bitte gib die Zeichenkette \"Hello\" ein: ");
+      System.out.print("Please enter the string \"Hello\": ");
       String input = scanner.next();
       if (text.equals(input)) {
-         System.out.println("Gut gemacht");
+         System.out.println("Well done");
       } else {
-         System.out.println("Nö, das war leider falsch");
+         System.out.println("No, that was incorrect");
          System.out.println(text);
          System.out.println(input);
       }

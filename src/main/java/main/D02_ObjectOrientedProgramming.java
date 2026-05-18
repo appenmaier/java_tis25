@@ -28,7 +28,7 @@ public class D02_ObjectOrientedProgramming {
     */
    @SuppressWarnings("unused")
    public static void main(String[] args) {
-      /* Attribute */
+      /* Attributes */
       FlightConnection connection1 = new FlightConnection();
       connection1.airline = "LH";
       connection1.connectionId = "0400";
@@ -45,7 +45,7 @@ public class D02_ObjectOrientedProgramming {
       flight2.flightDate = LocalDate.of(2026, 5, 18);
       flight2.flightPriceInEuro = 700.03;
 
-      /* Methoden */
+      /* Methods */
       String[] names = {"Hans", "Peter", "Lisa"};
       StringArrayHelper.print(names);
 
@@ -53,22 +53,22 @@ public class D02_ObjectOrientedProgramming {
       names2.array = names;
       names2.print();
 
-      /* Objekte */
-      LightBulb redLightBulb = new LightBulb("Rot");
-      LightBulb blueLightBulb = new LightBulb("Blau");
-      LightBulb blueLightBulb2 = new LightBulb("Blau");
+      /* Objects */
+      LightBulb redLightBulb = new LightBulb("Red");
+      LightBulb blueLightBulb = new LightBulb("Blue");
+      LightBulb blueLightBulb2 = new LightBulb("Blue");
 
       TableLight light1 = new TableLight();
-      System.out.println(light1.isShining() ? light1.getLightBulb().getColor() : "dunkel");
+      System.out.println(light1.isShining() ? light1.getLightBulb().getColor() : "dark");
       light1.plugIn();
       light1.switchOn();
       light1.changeLightBulb(blueLightBulb);
-      System.out.println(light1.isShining() ? light1.getLightBulb().getColor() : "dunkel");
+      System.out.println(light1.isShining() ? light1.getLightBulb().getColor() : "dark");
 
       System.out.println(blueLightBulb == blueLightBulb2);
       System.out.println(blueLightBulb.equals(blueLightBulb2));
 
-      System.out.println(new LightBulb("Grün"));
+      System.out.println(new LightBulb("Green"));
       System.out.println(new String("Hello World"));
 
       System.out.println(blueLightBulb.hashCode());

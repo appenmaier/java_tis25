@@ -23,10 +23,10 @@ public class LightBulb {
    }
 
    /**
-    * Creates a light bulb with the default color {@code "warmweiß"}.
+    * Creates a light bulb with the default color {@code "warm white"}.
     */
    public LightBulb() {
-      color = "warmweiß";
+      color = "warm white";
    }
 
    /**

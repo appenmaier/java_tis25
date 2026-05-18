@@ -35,7 +35,7 @@ public class D03_JavaApi {
     */
    @SuppressWarnings("unused")
    public static void main(String[] args) throws FileNotFoundException {
-      /* Mathematische Berechnungen */
+      /* Mathematical calculations */
       int a = 5, b = 3;
       System.out.println(a + b);
       System.out.println(a - b);
@@ -51,7 +51,7 @@ public class D03_JavaApi {
 
       System.out.println(Math.sqrt(64));
 
-      /* Pseudozufallszahlen */
+      /* Pseudo-random numbers */
       Random random = new Random();
 
       for (int i = 0; i < 100; i++) {
@@ -59,7 +59,7 @@ public class D03_JavaApi {
          System.out.println(randomNumber);
       }
 
-      /* Listen */
+      /* Lists */
       LinkedList<String> names = new LinkedList<>();
 
       System.out.println(names);
@@ -82,7 +82,7 @@ public class D03_JavaApi {
          System.out.println(name.toLowerCase());
       }
 
-      /* Datums- und Zeitangaben */
+      /* Date and time */
       LocalDate date = LocalDate.of(2028, 4, 29);
       LocalTime time = LocalTime.of(15, 42);
       LocalDateTime dateAndTime = LocalDateTime.now();
@@ -101,7 +101,7 @@ public class D03_JavaApi {
       long end = System.currentTimeMillis();
       System.out.println(end - start + "ms");
 
-      /* Systemeigenschaften */
+      /* System properties */
       System.out.println(System.getProperty("file.separator"));
       System.out.println(System.getProperty("user.dir"));
       System.out.println(System.getProperty("user.home"));
@@ -109,7 +109,7 @@ public class D03_JavaApi {
       Properties properties = System.getProperties();
       System.out.println(properties);
 
-      /* Auslesen von Dateien */
+      /* Reading files */
       // String path = "C:\\Users\\D054906\\git\\java_tis25\\src\\main\\resources\\persons.txt";
       String path = "src/main/resources/persons.txt";
       File file = new File(path);
@@ -139,13 +139,13 @@ public class D03_JavaApi {
       Integer x = Integer.parseInt("5");
       int z = x;
 
-      /* Aufzählungen (Enumerations) */
+      /* Enumerations */
       PlugType typeI = PlugType.TYPE_I;
 
       ArrayList<TableLight> lights = new ArrayList<>();
 
       lights.add(new TableLight());
-      lights.add(new TableLight(new LightBulb("rot")));
+      lights.add(new TableLight(new LightBulb("red")));
       lights.add(new TableLight());
 
       int total = 0;
