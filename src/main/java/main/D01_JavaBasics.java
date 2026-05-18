@@ -3,7 +3,7 @@ package main;
 import java.util.Scanner;
 
 /**
- * Demonstrates fundamental Java language elements including primitive data types,
+ * Demo 1: Demonstrates fundamental Java language elements including primitive data types,
  * user input, conditional statements, loops, string comparison, and arrays.
  *
  * @author Daniel Appenmaier

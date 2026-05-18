@@ -12,9 +12,9 @@ import model.Vehicle;
 import utility.StringArrayHelper;
 
 /**
- * Demonstrates object-oriented programming concepts including object creation, attribute access,
- * method calls, object identity vs. equality, {@code toString}, {@code hashCode}, Java records,
- * and Lombok-generated code.
+ * Demo 2: Demonstrates object-oriented programming concepts including object creation,
+ * attribute access, method calls, object identity vs. equality, {@code toString},
+ * {@code hashCode}, Java records, and Lombok-generated code.
  *
  * @author Daniel Appenmaier
  * @version 1.0

@@ -10,7 +10,8 @@ import model.Toaster;
 import model.WiredDevice;
 
 /**
- * Inheritance
+ * Demo 4: Demonstrates inheritance, polymorphism, upcasting, downcasting, and interfaces
+ * using a light-device class hierarchy.
  *
  * @author Daniel Appenmaier
  * @version 1.0
@@ -19,7 +20,7 @@ import model.WiredDevice;
 public class D04_Inheritance {
 
    /**
-    * Demonstrates inheritance, polymorphism, upcasting, downcasting, and interfaces.
+    * Entry point of the demonstration.
     *
     * @param args command-line arguments (not used)
     */

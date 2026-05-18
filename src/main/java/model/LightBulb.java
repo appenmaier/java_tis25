@@ -49,11 +49,21 @@ public class LightBulb {
       return this.color.equals(otherLightBulb.color);
    }
 
+   /**
+    * Returns a string representation of this light bulb.
+    *
+    * @return a string containing the light color
+    */
    @Override
    public String toString() {
       return "LightBulb [color=" + color + "]";
    }
 
+   /**
+    * Returns the hash code for this light bulb based on its color.
+    *
+    * @return the hash code
+    */
    @Override
    public int hashCode() {
       return Objects.hash(color);

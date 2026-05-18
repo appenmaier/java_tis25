@@ -17,10 +17,7 @@ import model.PlugType;
 import model.TableLight;
 
 /**
- * Demo class for the Java standard library.
- *
- * <p>
- * Demonstrates the use of commonly used Java API classes: mathematical calculations,
+ * Demo 3: Demonstrates the use of commonly used Java API classes: mathematical calculations,
  * pseudo-random numbers, linked lists, date/time handling, system properties,
  * file reading, and enumerations.
  *
